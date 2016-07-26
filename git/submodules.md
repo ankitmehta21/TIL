@@ -5,7 +5,7 @@ This last weekend, however, I finally had some success with submodules while con
 
 Proper credit where due, [this article by Christian Long](http://www.christianlong.com/blog/more-on-pelican-themes.html) was my primary source.
 
-```
+```bash
 # Add a submodule
 git submodule add {{repo}} {{local_directory}}
 git commit -am "Adding {{repo}} submodule"
