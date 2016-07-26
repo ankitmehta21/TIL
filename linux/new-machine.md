@@ -1,7 +1,7 @@
 # Instantiating a new machine:
-As Roberto explains in [this blog post](), we have an easy way to generate spark clusters on AWS.
+As Roberto explains in [this blog post](https://robertovitillo.com/2015/01/16/next-gen-data-analysis-framework-for-telemetry/), we have an easy way to generate spark clusters on AWS.
 If I'm going to be using a cluster for any more than a command or two I usually add some configuration via my dotfiles.
-I manage all local config through [homeshick](), which makes this really easy.
+I manage all local config through [homeshick](https://github.com/andsens/homeshick), which makes this really easy.
 
 Here's the workflow once I tunnel into a freshly provisioned machine:
 ```
