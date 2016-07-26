@@ -7,15 +7,15 @@ Proper credit where due, [this article by Christian Long](http://www.christianlo
 
 ```bash
 # Add a submodule
-git submodule add {{repo}} {{local_directory}}
-git commit -am "Adding {{repo}} submodule"
+git submodule add $repo $local_directory
+git commit -am "Adding $repo submodule"
 
 # View submodules
 git submodule status
 git submodule status --recursive  # If the submodule has submodules, like pelican-themes
 
 # Initialize recursive submodules as desired
-git submodule init {{sub-submodule}}
+git submodule init $sub_submodule
 git submodule update
 
 ```
