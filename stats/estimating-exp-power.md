@@ -37,4 +37,9 @@ get.confint(10000)
          1 agresti-coull 5000 10000  0.5 0.4902021 0.5097979
 ```
 
-This probably warrents a full blog post...
+Intuitively, this makes sense.
+The sample variance of the mean should be sqrt(0.5^2/N), which is 0.005 at N=10k.
+With +/- 2*sigma, we get a clean +/-0.01.
+
+This snippet is more useful when dealing with probabilities closer to 1 or 0 with smaller sample size.
+In this case, we can get accurate intervals for strance occurances.
