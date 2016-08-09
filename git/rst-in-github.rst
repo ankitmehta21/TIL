@@ -10,4 +10,4 @@ So, I added some useless markup to this rst file, and I will see how Github hand
 I'm actually learning something with my TIL post :).
 
 Looks like the metadata wrapped in colons is still visible.
-Let's test an HTML meta attribute...
+Let's test an HTML meta attribute... Dang. Still visible, and twice as ugly.
