@@ -10,6 +10,9 @@ git clone git://github.com/andsens/homeshick.git $HOME/.homesick/repos/homeshick
 printf '\nsource "$HOME/.homesick/repos/homeshick/homeshick.sh"' >> $HOME/.bashrc
 source $HOME/.bashrc
 
+# Save preconfigured .bashrc
+mv ~/.bashrc ~/.bashrc_local
+
 # Get my dotfiles
 homeshick clone https://harterrt@bitbucket.org/harterrt/dotfiles.git
 homeshick link dotfiles
