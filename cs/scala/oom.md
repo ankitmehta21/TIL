@@ -4,19 +4,25 @@ I spend the better part of yesterday afternood debuggin the following error comi
 Of course, now that I've solved the problem, I can't seem to reproduce the error even by going back in time through my commit history.
 This leads me to beleive that the environment variables I was setting to adjust the executor memory were the solution, but took a while to be picked up by sbt.
 
+# Code and Commands
 Sample [scala job](https://github.com/harterrt/telemetry-batch-view/blob/9a78ce7977e1e75d75391c78c144a85c9358d7df/src/main/scala/com/mozilla/telemetry/views/CrossSectionalView.scala).
 (Note: main() should not be commented out.
+
 Sample command:
 ```
 sbt "run-main com.mozilla.telemetry.views.CrossSectionalView" &> local_err.txt
 ```
 
+# Possible Solutions
 If you see this error again, consider the following:
 * Upgrade from spark 1.6.1 to 2.0.0 - Do the errors still persist?
 * Add more memory to the executor with something like: `sparkConf.set("spark.executor.memory", "4g")`
 * Don't use a HiveContext to read a local parquet dataset - instead use a SQLContext.
 
 In general, keep better records and tag commits with what sort of error your getting.
+
+# Error
+The complete error is in this directory with name oom.txt.
 
 ```
 16/08/15 10:21:21 INFO InternalParquetRecordReader: RecordReader initialized will read a total of 0 records.
