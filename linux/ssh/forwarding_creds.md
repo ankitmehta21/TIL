@@ -8,3 +8,6 @@ ssh -A <address>
 ssh git@github.com
 >  Hi harterrt! You've successfully authenticated, but GitHub does not provide shell access.
 ```
+
+If you're having trouble, [this page](https://developer.github.com/guides/using-ssh-agent-forwarding/) has debugging ideas.
+In particular, make sure `ssh-add -L` lists your public key.
