@@ -1,8 +1,8 @@
 # Spark OOM Error
 
-I spend the better part of yesterday afternood debuggin the following error coming from a simple spark/scala job running on my local machine.
+I spend the better part of yesterday afternoon debugging the following error coming from a simple spark/scala job running on my local machine.
 Of course, now that I've solved the problem, I can't seem to reproduce the error even by going back in time through my commit history.
-This leads me to beleive that the environment variables I was setting to adjust the executor memory were the solution, but took a while to be picked up by sbt.
+This leads me to believe that the environment variables I was setting to adjust the executor memory were the solution, but took a while to be picked up by sbt.
 
 # Code and Commands
 Sample [scala job](https://github.com/harterrt/telemetry-batch-view/blob/9a78ce7977e1e75d75391c78c144a85c9358d7df/src/main/scala/com/mozilla/telemetry/views/CrossSectionalView.scala).
