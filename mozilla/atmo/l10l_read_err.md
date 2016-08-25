@@ -7,12 +7,12 @@ In this case, it's easier to use spark-submit to run your job.
 Here's an example using a 
 [preliminary version of the Cross Sectional Dataset](https://github.com/harterrt/telemetry-batch-view/blob/candidate/src/main/scala/com/mozilla/telemetry/views/CrossSectionalView.scala)
 from the telemetry-batch-view library:
-```
+```sh
 sbt "run-main com.mozilla.telemetry.views.CrossSectionalView --outName=test"
 ```
 
 Which will fail with something like:
-```
+```sh
 ...
 16/08/25 01:06:01 INFO Datastore: The class "org.apache.hadoop.hive.metastore.model.MResourceUri" is tagged as "embedded-only" so does not have its own datastore table.
 [error] (run-main-0) java.lang.RuntimeException: java.lang.RuntimeException: The root scratch dir: /tmp/hive on HDFS should be writable. Current permissions are: rwx------
@@ -41,7 +41,7 @@ Caused by: java.lang.RuntimeException: The root scratch dir: /tmp/hive on HDFS s
 ```
 
 If you change those permissions, like I did, you'll get a new error message (included here because that's probably what you're searching Google with):
-```
+```sh
 ...
 16/08/25 01:08:17 INFO SessionState: Created HDFS directory: /tmp/hive/hadoop/455f2125-8bba-4a11-87dd-46b4f46ad019
 16/08/25 01:08:17 INFO SessionState: Created local directory: /mnt1/hadoop/455f2125-8bba-4a11-87dd-46b4f46ad019
@@ -84,7 +84,7 @@ org.apache.spark.sql.AnalysisException: Table not found: longitudinal; line 1 po
 
 # The Fix
 Instead, submit your job using spark-submit. In this case:
-```
+```sh
 sbt assembly &&
 spark-submit --master yarn-client \
   --class com.mozilla.telemetry.views.CrossSectionalView \
