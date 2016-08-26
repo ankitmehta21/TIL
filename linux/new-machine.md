@@ -13,9 +13,7 @@ source $HOME/.bashrc
 # Save preconfigured .bashrc
 mv ~/.bashrc ~/.bashrc_local
 
-# Get my dotfiles
-homeshick clone git@bitbucket.org:harterrt/dotfiles.git
-
-# Run init script
-~/.init_new_machine.sh
+# Get my dotfiles and run my initialization script
+homeshick clone git@bitbucket.org:harterrt/dotfiles.git &&
+sh ~/.init_new_machine.sh
 ```
