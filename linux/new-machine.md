@@ -15,6 +15,6 @@ mv ~/.bashrc ~/.bashrc_local
 
 # Get my dotfiles and run my initialization script
 homeshick -b clone git@bitbucket.org:harterrt/dotfiles.git &&
-homeshick -b clone dotfiles &&
+homeshick -b link dotfiles &&
 sh ~/.init_new_machine.sh
 ```
