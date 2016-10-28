@@ -6,12 +6,12 @@ I manage all local config through [homeshick](https://github.com/andsens/homeshi
 Here's the workflow once I tunnel into a freshly provisioned machine:
 ```
 # Install homeshick
-git clone git://github.com/andsens/homeshick.git $HOME/.homesick/repos/homeshick
-printf '\nsource "$HOME/.homesick/repos/homeshick/homeshick.sh"' >> $HOME/.bashrc
-source $HOME/.bashrc
+git clone git://github.com/andsens/homeshick.git $HOME/.homesick/repos/homeshick &&
+printf '\nsource "$HOME/.homesick/repos/homeshick/homeshick.sh"' >> $HOME/.bashrc &&
+source $HOME/.bashrc &&
 
 # Save preconfigured .bashrc
-mv ~/.bashrc ~/.bashrc_local
+mv ~/.bashrc ~/.bashrc_local &&
 
 # Get my dotfiles and run my initialization script
 homeshick -b clone git@bitbucket.org:harterrt/dotfiles.git &&
